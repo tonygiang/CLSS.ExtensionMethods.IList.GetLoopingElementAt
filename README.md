@@ -6,7 +6,7 @@ Looping a collection indefinitely is an operation that maps well to many use cas
 
 With [`IList`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.ilist?view=net-6.0) and [`IList<T>`](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ilist-1?view=net-6.0) types, we have more information to work with. Use cases for looping in descending order emerge and are not addressed by `IEnumerator.LoopNext`. Writing descending loop by hand is not as obvious as it may sound and can stump your train of thought.
 
-```
+```csharp
 using CLSS;
 
 var numbers = new int[] { 0, 1, 2, 3 };
@@ -24,7 +24,7 @@ foreach (int i = 0; i > -takeNumber; --i)
 
 `GetLoopingElementAt` is an extension method for all `Ilist` and `IList<T>` types that resolves a integer number it takes in as a cyclic index number and returns the element at the resulting index. By spelling out what it's doing on the method name, it gives you a better code comprehension.
 
-```
+```csharp
 using CLSS;
 
 var numbers = new int[] { 0, 1, 2, 3 };
